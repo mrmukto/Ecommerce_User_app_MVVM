@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.mrmukto.ecomusers.ProductListFragment"
+        android:label="Product List"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_userOrderListFragment"
+            app:destination="@id/userOrderListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mrmukto.ecomusers.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.mrmukto.ecomusers.UserProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/userOrderListFragment"
+        android:name="com.mrmukto.ecomusers.UserOrderListFragment"
+        android:label="My Orders"
+        tools:layout="@layout/fragment_user_order_list" />
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.mrmukto.ecomusers.CartListFragment"
+        android:label="My Cart"
+        tools:layout="@layout/fragment_cart_list" >
+        <action
+            android:id="@+id/action_cartListFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.mrmukto.ecomusers.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderConfirmationFragment"
+            app:destination="@id/orderConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessfulMessageFragment"
+        android:name="com.mrmukto.ecomusers.OrderSuccessfulMessageFragment"
+        android:label="Order Completed"
+        tools:layout="@layout/fragment_order_successful_message" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.mrmukto.ecomusers.ProductDetailsFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/orderConfirmationFragment"
+        android:name="com.mrmukto.ecomusers.OrderConfirmationFragment"
+        android:label="fragment_order_confirmation"
+        tools:layout="@layout/fragment_order_confirmation" >
+        <action
+            android:id="@+id/action_orderConfirmationFragment_to_orderSuccessfulMessageFragment"
+            app:destination="@id/orderSuccessfulMessageFragment" />
+    </fragment>
+</navigation>
